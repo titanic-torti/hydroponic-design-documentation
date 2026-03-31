@@ -89,6 +89,7 @@ p {
   align-items: center;
   background-color: var(--c_coolbreeze);
   position: relative;
+  overflow: hidden;
 }
 
 #definition .top-left-circle {
@@ -139,6 +140,15 @@ p {
   height: 200px;
   background-color: var(--c_tempest);
   border-radius: 50%;
+}
+
+.definition-circles-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1032px;
+  height: 100%;
 }
 
 #definition .top-bar {
