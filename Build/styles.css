@@ -19,3 +19,10 @@
   --c_bolt: #5c573e;
   --c_void: #120309;
 }
+
+.leaf {
+  width: 180px;
+  height: 180px;
+  background-color: var(--c_ribbit);
+  border-radius: 0 65% 0 65%;
+}
