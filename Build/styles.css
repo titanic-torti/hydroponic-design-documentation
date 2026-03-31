@@ -160,11 +160,51 @@ p {
 
 #definition .definition-circle-1 {
   position: absolute;
-  top: 400px;
-  left: 200px;
-  width: 100px;
-  height: 100px;
+  top: 420px;
+  left: 290px;
+  width: 85px;
+  height: 85px;
   background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+#definition .definition-circle-2 {
+  position: absolute;
+  top: 500px;
+  left: 220px;
+  width: 65px;
+  height: 65px;
+  background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+#definition .definition-circle-3 {
+  position: absolute;
+  top: 570px;
+  left: 290px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+#definition .rightmost-circle {
+  position: absolute;
+  top: 430px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+#definition .rightmost-circle-inner {
+  position: absolute;
+  top: 485px;
+  right: -95px;
+  width: 290px;
+  height: 290px;
+  background-color: var(--c_coolbreeze);
   border-radius: 50%;
 }
 
