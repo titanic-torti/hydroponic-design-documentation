@@ -359,7 +359,7 @@ p {
 }
 
 #quotes .top-right-leaf-cutout-fill:hover {
-  animation: shimmer-border 0.7s ease-in-out;
+  animation: shimmer-border 1s ease-in-out;
 }
 
 #quotes .top-right-leaf-cutout-fill:hover::after {
@@ -497,7 +497,7 @@ p {
 }
 
 #explore .leaf-cutout-fill:hover {
-  animation: shimmer-border 0.7s ease-in-out;
+  animation: shimmer-border 1s ease-in-out;
 }
 
 #explore .leaf-cutout-fill:hover::after {
