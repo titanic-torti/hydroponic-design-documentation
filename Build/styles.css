@@ -71,25 +71,35 @@ p {
 #explore,
 #palette {
   height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .leaf {
+  position: absolute;
   width: 180px;
   height: 180px;
   background-color: var(--c_ribbit);
   border-radius: 0 65% 0 65%;
 }
 
+.decoration-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1032px;
+  height: 100%;
+}
+
 /* ----------------------------------------------------------------------------- */
 /* Definition */
 
 #definition {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--c_coolbreeze);
-  position: relative;
-  overflow: hidden;
 }
 
 #definition .top-left-circle {
@@ -140,15 +150,6 @@ p {
   height: 200px;
   background-color: var(--c_tempest);
   border-radius: 50%;
-}
-
-.definition-circles-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1032px;
-  height: 100%;
 }
 
 #definition .top-bar {
@@ -223,9 +224,6 @@ p {
 
 #quotes {
   background-color: var(--c_beach);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .quotes-stack {
@@ -266,3 +264,73 @@ p {
   text-align: right;
   margin-bottom: 0;
 }
+
+#quotes .circle-overflow-outline-1 {
+  position: absolute;
+  top: -270px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 5px solid var(--c_tempest);
+}
+
+#quotes .circle-overflow-outline-2 {
+  position: absolute;
+  top: -205px;
+  right: -95px;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  border: 5px solid var(--c_tempest);
+}
+
+#quotes .top-right-leaf {
+  width: 300px;
+  height: 300px;
+  top: 50px;
+  right: 10px;
+}
+
+#quotes .top-right-leaf-cutout {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 240px;
+  top: 120px;
+  background-color: var(--c_beach);
+  border-radius: 50%;
+}
+
+#quotes .top-right-leaf-cutout-fill {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: 255px;
+  top: 135px;
+  border-radius: 50%;
+  border: 3px solid var(--c_tempest);
+}
+
+#quotes .bottom-left-leaf {
+  width: 300px;
+  height: 300px;
+  top: 350px;
+  rotate: 90deg;
+}
+
+#quotes .bottom-left-leaf-outline {
+  width: 300px;
+  height: 300px;
+  top: 335px;
+  left: 15px;
+  rotate: 90deg;
+  border: 3px solid var(--c_ribbit);
+  background: None;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Explore */
+
+/* ----------------------------------------------------------------------------- */
+/* Palette */
