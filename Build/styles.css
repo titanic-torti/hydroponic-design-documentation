@@ -223,4 +223,46 @@ p {
 
 #quotes {
   background-color: var(--c_beach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quotes-stack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  padding: 60px 0px;
+}
+
+.quote-card {
+  background-color: var(--c_clumsywizard);
+  border-radius: 40px;
+  padding: 24px 28px;
+  max-width: 320px;
+  position: relative;
+  margin-top: -40px;
+}
+
+.quote-left {
+  align-self: flex-start;
+}
+
+.quote-right {
+  align-self: flex-end;
+}
+
+.quote-text {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.quote-author {
+  color: white;
+  font-size: 0.9rem;
+  text-align: right;
+  margin-bottom: 0;
 }
