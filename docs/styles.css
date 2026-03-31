@@ -167,17 +167,19 @@ p {
 }
 
 .definition-card {
+  position: relative;
   background-color: var(--c_beach);
   border-radius: 48px;
   padding: 3rem 2.5rem;
   max-width: 600px;
   text-align: left;
+  z-index: 1;
 }
 
 #definition .definition-circle-1 {
   position: absolute;
-  top: 460px;
-  left: 250px;
+  top: 85%;
+  left: 30px;
   width: 85px;
   height: 85px;
   background-color: var(--c_tempest);
@@ -186,8 +188,8 @@ p {
 
 #definition .definition-circle-2 {
   position: absolute;
-  top: 540px;
-  left: 180px;
+  top: calc(85% + 70px);
+  left: -35px;
   width: 65px;
   height: 65px;
   background-color: var(--c_tempest);
@@ -196,8 +198,8 @@ p {
 
 #definition .definition-circle-3 {
   position: absolute;
-  top: 610px;
-  left: 250px;
+  top: calc(85% + 140px);
+  left: 30px;
   width: 25px;
   height: 25px;
   background-color: var(--c_tempest);
