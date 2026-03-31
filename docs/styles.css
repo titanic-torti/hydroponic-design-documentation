@@ -455,10 +455,10 @@ p {
   background: var(--c_gandalf);
 }
 
-.biscuit {
+.bolt {
   grid-column: 10;
   grid-row: 3;
-  background: var(--c_biscuit);
+  background: var(--c_bolt);
 }
 
 .wardrobe {
@@ -467,10 +467,10 @@ p {
   background: var(--c_wardrobe);
 }
 
-.bolt {
-  grid-column: 9;
+.biscuit {
+  grid-column: 10;
   grid-row: 4;
-  background: var(--c_bolt);
+  background: var(--c_biscuit);
 }
 
 .sw {
