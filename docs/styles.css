@@ -338,7 +338,7 @@ p {
 /* Explore */
 
 /* ----------------------------------------------------------------------------- */
-/* Palette */
+/* Color Palette */
 
 .palette {
   background-color: #fff;
@@ -471,4 +471,37 @@ p {
   grid-column: 9;
   grid-row: 4;
   background: var(--c_bolt);
+}
+
+.sw {
+  position: relative;
+}
+
+.sw::after {
+  content: attr(data-hex);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background-color: var(--c_void);
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 680;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.sw:hover {
+  transform: scale(1.15);
+  transition: transform 0.15s ease;
+  z-index: 1;
+}
+
+.sw:hover::after {
+  opacity: 1;
 }
