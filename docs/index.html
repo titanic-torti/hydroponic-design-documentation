@@ -126,5 +126,15 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.querySelectorAll(".sw").forEach((sw) => {
+        sw.addEventListener("click", () => {
+          navigator.clipboard.writeText(sw.dataset.hex).then(() => {
+            sw.classList.add("copied");
+            setTimeout(() => sw.classList.remove("copied"), 1500);
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -505,3 +505,12 @@ p {
 .sw:hover::after {
   opacity: 1;
 }
+
+.sw.copied::after {
+  content: "Copied!";
+  opacity: 1;
+}
+
+.sw {
+  cursor: pointer;
+}
