@@ -328,6 +328,15 @@ p {
   background: None;
 }
 
+#quotes .branch {
+  position: absolute;
+  width: 40px;
+  height: 450px;
+  bottom: -5px;
+  left: -20px;
+  border: 3px solid var(--c_biscuit);
+}
+
 /* ----------------------------------------------------------------------------- */
 /* Explore */
 
@@ -387,18 +396,17 @@ p {
   border: 3px solid var(--c_ribbit);
 }
 
-#explore .bottom-left-leaf {
-  top: 80px;
+#explore .right-branch {
+  position: absolute;
+  width: 40px;
+  height: 450px;
+  bottom: -5px;
+  right: -20px;
+  background-color: var(--c_biscuit);
 }
 
-#explore .explore-circle-outline {
-  position: absolute;
-  top: -50px;
-  left: 40px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 3px solid var(--c_tempest);
+#explore .bottom-left-leaf {
+  top: 40px;
 }
 
 #explore .leaf-cutout {
@@ -406,7 +414,7 @@ p {
   width: 100px;
   height: 100px;
   left: 160px;
-  top: 100px;
+  top: 60px;
   background-color: #ffffff;
   border-radius: 50%;
 }
@@ -416,9 +424,17 @@ p {
   width: 70px;
   height: 70px;
   left: 175px;
-  top: 115px;
+  top: 75px;
   border-radius: 50%;
   border: 3px solid var(--c_tempest);
+}
+
+#explore .left-branch {
+  position: absolute;
+  width: 40px;
+  height: 450px;
+  left: -20px;
+  background-color: var(--c_biscuit);
 }
 
 /* ----------------------------------------------------------------------------- */
