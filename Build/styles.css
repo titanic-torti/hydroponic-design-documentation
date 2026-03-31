@@ -26,6 +26,20 @@
 /* ----------------------------------------------------------------------------- */
 /* Fonts */
 
+h1 {
+  color: var(--c_tempest);
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
+
+p {
+  color: var(--c_tempest);
+}
+
 .shrikhand {
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -39,7 +53,7 @@
 .quicksand {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 680;
   font-style: normal;
 }
 .libre-baskerville {
@@ -50,6 +64,20 @@
 }
 
 /* ----------------------------------------------------------------------------- */
+
+#definition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.definition-card {
+  background-color: var(--c_beach);
+  border-radius: 48px;
+  padding: 2rem 2.5rem;
+  max-width: 480px;
+  text-align: left;
+}
 
 .leaf {
   width: 180px;
