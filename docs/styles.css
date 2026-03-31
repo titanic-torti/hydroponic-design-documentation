@@ -81,8 +81,8 @@ p {
 
 .leaf {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 300px;
+  height: 300px;
   background-color: var(--c_ribbit);
   border-radius: 0 65% 0 65%;
 }
@@ -291,8 +291,6 @@ p {
 }
 
 #quotes .top-right-leaf {
-  width: 300px;
-  height: 300px;
   top: 50px;
   right: 10px;
 }
@@ -318,15 +316,11 @@ p {
 }
 
 #quotes .bottom-left-leaf {
-  width: 300px;
-  height: 300px;
   top: 350px;
   rotate: 90deg;
 }
 
 #quotes .bottom-left-leaf-outline {
-  width: 300px;
-  height: 300px;
   top: 335px;
   left: 15px;
   rotate: 90deg;
@@ -336,6 +330,96 @@ p {
 
 /* ----------------------------------------------------------------------------- */
 /* Explore */
+
+.explore-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  z-index: 1;
+}
+
+.explore-title {
+  font-size: 52px;
+  color: var(--c_tempest);
+  letter-spacing: 3px;
+}
+
+.explore-grid {
+  display: flex;
+  gap: 32px;
+}
+
+.explore-btn {
+  width: 180px;
+  height: 180px;
+  border: 3px solid var(--c_tempest);
+  border-radius: 32px;
+  background: transparent;
+  color: var(--c_tempest);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.explore-btn:hover {
+  background: rgba(11, 45, 114, 0.06);
+  transform: scale(1.05);
+}
+
+.explore-btn svg {
+  width: 90px;
+  height: 90px;
+}
+
+#explore .top-right-leaf {
+  top: 120px;
+  right: 10px;
+  rotate: 180deg;
+}
+
+#explore .top-right-leaf-outline {
+  top: 105px;
+  right: 25px;
+  rotate: 180deg;
+  background: none;
+  border: 3px solid var(--c_ribbit);
+}
+
+#explore .bottom-left-leaf {
+  top: 80px;
+}
+
+#explore .explore-circle-outline {
+  position: absolute;
+  top: -50px;
+  left: 40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--c_tempest);
+}
+
+#explore .leaf-cutout {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 160px;
+  top: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+#explore .leaf-cutout-fill {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 175px;
+  top: 115px;
+  border-radius: 50%;
+  border: 3px solid var(--c_tempest);
+}
 
 /* ----------------------------------------------------------------------------- */
 /* Color Palette */
