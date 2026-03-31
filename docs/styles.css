@@ -441,6 +441,7 @@ p {
 
 .sw {
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .tomato {
@@ -557,10 +558,6 @@ p {
   background: var(--c_biscuit);
 }
 
-.sw {
-  position: relative;
-}
-
 .sw::after {
   content: attr(data-hex);
   position: absolute;
@@ -593,8 +590,4 @@ p {
 .sw.copied::after {
   content: "Copied!";
   opacity: 1;
-}
-
-.sw {
-  cursor: pointer;
 }
