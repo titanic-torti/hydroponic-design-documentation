@@ -64,11 +64,90 @@ p {
 }
 
 /* ----------------------------------------------------------------------------- */
+/* Universal */
+
+#definition,
+#quotes,
+#explore,
+#palette {
+  height: 700px;
+}
+
+.leaf {
+  width: 180px;
+  height: 180px;
+  background-color: var(--c_ribbit);
+  border-radius: 0 65% 0 65%;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Definition */
 
 #definition {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--c_coolbreeze);
+  position: relative;
+}
+
+#definition .top-left-circle {
+  position: absolute;
+  top: -20px;
+  left: 110px;
+  width: 220px;
+  height: 220px;
+  background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+#definition .top-left-circle-inner {
+  position: absolute;
+  top: 15px;
+  left: 145px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--c_coolbreeze);
+  border-radius: 50%;
+}
+
+#definition .top-left-circle-support {
+  position: absolute;
+  top: 210px;
+  left: 60px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+#definition .top-left-circle-support-inner {
+  position: absolute;
+  top: 235px;
+  left: 85px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--c_coolbreeze);
+  border-radius: 50%;
+}
+
+#definition .top-right-circle {
+  position: absolute;
+  top: -70px;
+  right: 140px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+#definition .top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: var(--c_tempest);
 }
 
 .definition-card {
@@ -79,9 +158,19 @@ p {
   text-align: left;
 }
 
-.leaf {
-  width: 180px;
-  height: 180px;
-  background-color: var(--c_ribbit);
-  border-radius: 0 65% 0 65%;
+#definition .definition-circle-1 {
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--c_tempest);
+  border-radius: 50%;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Quotes */
+
+#quotes {
+  background-color: var(--c_beach);
 }
