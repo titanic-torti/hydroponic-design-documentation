@@ -681,8 +681,8 @@ p {
 
 .swatch-grid {
   display: grid;
-  grid-template-columns: repeat(11, 64px);
-  grid-template-rows: repeat(4, 64px);
+  grid-template-columns: repeat(11, 76px);
+  grid-template-rows: repeat(4, 76px);
   gap: 5px;
 }
 
