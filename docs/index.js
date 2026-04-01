@@ -33,7 +33,7 @@ function initPopBubble(bubble) {
 
 document
   .querySelectorAll(
-    "#definition .definition-circle-1, #definition .definition-circle-2, #definition .definition-circle-3, #definition .top-right-circle",
+    "#definition .definition-circle-1, #definition .definition-circle-2, #definition .definition-circle-3, #definition .top-right-circle, #definition .top-left-circle, #definition .top-left-circle-support",
   )
   .forEach(initPopBubble);
 
