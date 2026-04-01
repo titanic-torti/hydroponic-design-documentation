@@ -21,6 +21,8 @@
   --c_wardrobe: #524632;
   --c_bolt: #5c573e;
   --c_void: #120309;
+
+  --m_gap: 40px;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -439,12 +441,12 @@ p {
 }
 
 #quotes .bottom-left-leaf {
-  top: 350px;
+  bottom: var(--m_gap);
   rotate: 90deg;
 }
 
 #quotes .bottom-left-leaf-outline {
-  top: 335px;
+  bottom: calc(var(--m_gap) + 15px);
   left: 15px;
   rotate: 90deg;
   border: 3px solid var(--c_ribbit);
@@ -467,13 +469,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: var(--m_gap);
   z-index: 1;
 }
 
 .explore-grid {
   display: flex;
-  gap: 32px;
+  gap: var(--m_gap);
 }
 
 .explore-btn {
@@ -525,7 +527,7 @@ p {
 }
 
 #explore .bottom-left-leaf {
-  top: 40px;
+  top: var(--m_gap);
 }
 
 #explore .leaf-cutout {
@@ -584,7 +586,7 @@ p {
 #palette {
   flex-direction: column;
   text-align: center;
-  gap: 40px;
+  gap: var(--m_gap);
 }
 
 .palette {
