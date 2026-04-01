@@ -132,6 +132,12 @@ p {
   height: 100%;
 }
 
+.header-title {
+  font-size: 52px;
+  color: var(--c_tempest);
+  letter-spacing: 3px;
+}
+
 /* ----------------------------------------------------------------------------- */
 /* Definition */
 
@@ -465,12 +471,6 @@ p {
   z-index: 1;
 }
 
-.explore-title {
-  font-size: 52px;
-  color: var(--c_tempest);
-  letter-spacing: 3px;
-}
-
 .explore-grid {
   display: flex;
   gap: 32px;
@@ -580,6 +580,12 @@ p {
 
 /* ----------------------------------------------------------------------------- */
 /* Color Palette */
+
+#palette {
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+}
 
 .palette {
   background-color: #fff;
