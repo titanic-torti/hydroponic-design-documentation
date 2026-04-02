@@ -1,27 +1,40 @@
-const POSTS_BASE = "../posts/";
+const OUTLET_CONFIG = {
+  blog: { title: "Dev Blog", key: "posts", base: "../posts/" },
+  news: { title: "News", key: "articles", base: "../articles/" },
+};
+
 const params = new URLSearchParams(window.location.search);
 const state = {
+  outlet: params.get("outlet") || "blog",
   medium: params.get("medium") || "all",
   project: params.get("project") || "all",
 };
 let allPosts = [];
 
-fetch("manifest.json")
-  .then((r) => r.json())
-  .then((manifest) =>
-    Promise.all(
-      manifest.posts.map((filename) =>
-        fetch(POSTS_BASE + filename)
-          .then((r) => (r.ok ? r.text() : null))
-          .then((raw) => (raw ? parseMd(raw) : null)),
-      ),
-    ),
-  )
-  .then((results) => {
-    allPosts = results.filter(Boolean);
-    allPosts.sort((a, b) => b.date.localeCompare(a.date));
-    renderAll();
-  });
+function loadPosts() {
+  const cfg = OUTLET_CONFIG[state.outlet] || OUTLET_CONFIG.blog;
+  document.getElementById("blog-title").textContent = cfg.title;
+
+  fetch("manifest.json")
+    .then((r) => r.json())
+    .then((manifest) => {
+      const files = manifest[cfg.key] || [];
+      return Promise.all(
+        files.map((filename) =>
+          fetch(cfg.base + filename)
+            .then((r) => (r.ok ? r.text() : null))
+            .then((raw) => (raw ? parseMd(raw) : null)),
+        ),
+      );
+    })
+    .then((results) => {
+      allPosts = results.filter(Boolean);
+      allPosts.sort((a, b) => b.date.localeCompare(a.date));
+      renderAll();
+    });
+}
+
+loadPosts();
 
 function parseMd(raw) {
   const lines = raw.split("\n");
@@ -50,8 +63,9 @@ function renderAll() {
   container.innerHTML = "";
   allPosts.forEach((post) => container.appendChild(buildCard(post)));
 
-  // Activate pills matching initial state from URL params
+  // Activate pills matching state
   [
+    ["filter-outlet", state.outlet],
     ["filter-medium", state.medium],
     ["filter-project", state.project],
   ].forEach(([groupId, value]) => {
@@ -116,9 +130,14 @@ function initFilterGroup(groupId, stateKey) {
       .forEach((p) => p.classList.remove("active"));
     pill.classList.add("active");
     state[stateKey] = pill.dataset.value;
-    applyFilters();
+    if (stateKey === "outlet") {
+      loadPosts();
+    } else {
+      applyFilters();
+    }
   });
 }
 
+initFilterGroup("filter-outlet", "outlet");
 initFilterGroup("filter-medium", "medium");
 initFilterGroup("filter-project", "project");

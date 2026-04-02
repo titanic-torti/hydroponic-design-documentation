@@ -20,10 +20,17 @@
   </head>
   <body>
     <header class="blog-header">
-      <h1>Dev Blog</h1>
+      <h1 id="blog-title">Dev Blog</h1>
     </header>
 
     <section class="blog-filters">
+      <div class="filter-group">
+        <span class="filter-label quicksand">Outlet</span>
+        <div class="filter-pills" id="filter-outlet">
+          <button class="pill active" data-value="blog">Blog</button>
+          <button class="pill" data-value="news">News</button>
+        </div>
+      </div>
       <div class="filter-group">
         <span class="filter-label quicksand">Medium</span>
         <div class="filter-pills" id="filter-medium">
