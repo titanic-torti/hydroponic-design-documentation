@@ -26,6 +26,80 @@
 }
 
 /* ----------------------------------------------------------------------------- */
+/* Header */
+
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 60px;
+  background-color: var(--c_clumsywizard);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+  color: var(--c_ribbit);
+  text-decoration: none;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.header-nav-link {
+  color: var(--c_beach);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  transition: color 0.15s;
+}
+
+.header-nav-link:hover {
+  color: var(--c_ribbit);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-socials-label {
+  color: var(--c_beach);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  margin-right: 4px;
+}
+
+.header-social-link {
+  color: var(--c_beach);
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.header-social-link:hover {
+  color: var(--c_ribbit);
+}
+
+/* ----------------------------------------------------------------------------- */
 /* Fonts */
 
 h1 {
