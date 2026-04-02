@@ -845,3 +845,14 @@ p {
   content: "Copied!";
   opacity: 1;
 }
+
+/* ----------------------------------------------------------------------------- */
+/* Footer */
+.footer-spacing {
+  width: 100%;
+  height: 100px;
+}
+
+.closing-color {
+  background-color: var(--c_beach);
+}
