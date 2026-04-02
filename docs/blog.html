@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dev Blog — Hydroponics Mood Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Fredoka:wght@300..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <header class="blog-header">
+      <h1>Dev Blog</h1>
+    </header>
+
+    <section class="blog-filters">
+      <div class="filter-group">
+        <span class="filter-label quicksand">Medium</span>
+        <div class="filter-pills" id="filter-medium">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="Art">Art</button>
+          <button class="pill" data-value="Writing">Writing</button>
+          <button class="pill" data-value="Data">Data</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label quicksand">Project</span>
+        <div class="filter-pills" id="filter-project">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="Hydro">Hydro</button>
+          <button class="pill" data-value="Personal">Personal</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="blog-posts container" id="posts-container"></main>
+    <p class="blog-empty quicksand" id="posts-empty" hidden>
+      No posts match these filters.
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="blog.js"></script>
+  </body>
+</html>

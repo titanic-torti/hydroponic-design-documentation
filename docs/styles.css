@@ -36,6 +36,9 @@ h1 {
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 5px;
+}
+
+#definition h1 {
   text-decoration: underline;
 }
 
@@ -568,6 +571,10 @@ p {
   background: transparent;
   color: var(--c_tempest);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   transition:
     border-color 0.15s ease,
     color 0.15s ease,
