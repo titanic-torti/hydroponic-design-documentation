@@ -621,9 +621,16 @@ p {
 
 .swatch-grid {
   display: grid;
-  grid-template-columns: repeat(11, 76px);
-  grid-template-rows: repeat(4, 76px);
+  grid-template-columns: repeat(11, 54px);
+  grid-template-rows: repeat(4, 54px);
   gap: 5px;
+}
+
+@media (min-width: 1000px) {
+  .swatch-grid {
+    grid-template-columns: repeat(11, 76px);
+    grid-template-rows: repeat(4, 76px);
+  }
 }
 
 .sw {
@@ -791,6 +798,13 @@ p {
   .quote-card {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .swatch-grid {
+    grid-template-columns: repeat(6, 54px);
+    grid-template-rows: repeat(5, 54px);
   }
 }
 
