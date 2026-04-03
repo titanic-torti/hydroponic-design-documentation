@@ -825,6 +825,14 @@ p {
     color: var(--c_ribbit);
   }
 
+  h1 {
+    font-size: 40px;
+  }
+
+  #definition p {
+    font-size: 18px;
+  }
+
   .swatch-grid {
     grid-template-columns: repeat(6, 76px);
     grid-template-rows: repeat(5, 76px);
