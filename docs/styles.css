@@ -327,10 +327,10 @@ p {
 
 #definition .top-bar {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 40px;
   background-color: var(--c_tempest);
 }
 
