@@ -405,7 +405,6 @@ p {
   flex-direction: column;
   width: 100%;
   max-width: 700px;
-  padding: 60px 0px;
 }
 
 .quote-card {
@@ -781,6 +780,25 @@ p {
 .sw.copied::after {
   content: "Copied!";
   opacity: 1;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Mobile */
+
+@media (max-width: 700px) {
+  #quotes {
+    height: auto;
+    min-height: 0;
+    padding: var(--m_gap);
+    gap: var(--m_gap);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quote-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 /* ----------------------------------------------------------------------------- */
