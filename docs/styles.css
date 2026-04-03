@@ -230,10 +230,10 @@ p {
 
 #definition .top-left-circle {
   position: absolute;
-  top: -30px;
-  left: 40px;
-  width: 220px;
-  height: 220px;
+  top: -35px;
+  left: 10px;
+  width: 240px;
+  height: 240px;
   background-color: var(--c_tempest);
   border-radius: 50%;
   transform-origin: center;
@@ -253,9 +253,9 @@ p {
 #definition .top-left-circle-inner {
   position: absolute;
   top: 5px;
-  left: 75px;
-  width: 150px;
-  height: 150px;
+  left: 50px;
+  width: 160px;
+  height: 160px;
   background-color: var(--c_coolbreeze);
   border-radius: 50%;
   pointer-events: none;
@@ -275,10 +275,10 @@ p {
 
 #definition .top-left-circle-support {
   position: absolute;
-  top: 200px;
-  left: -10px;
-  width: 100px;
-  height: 100px;
+  top: 205px;
+  left: -35px;
+  width: 110px;
+  height: 110px;
   background-color: var(--c_tempest);
   border-radius: 50%;
   transform-origin: center;
@@ -297,10 +297,10 @@ p {
 
 #definition .top-left-circle-support-inner {
   position: absolute;
-  top: 225px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
+  top: 230px;
+  left: -10px;
+  width: 60px;
+  height: 60px;
   background-color: var(--c_coolbreeze);
   border-radius: 50%;
   pointer-events: none;
