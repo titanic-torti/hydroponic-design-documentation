@@ -23,6 +23,8 @@
   --c_void: #120309;
 
   --m_gap: 40px;
+  --m_outline: 3px;
+  --t_bubble: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -237,6 +239,45 @@ p {
   letter-spacing: 3px;
 }
 
+.branch {
+  position: absolute;
+  width: 40px;
+  height: 450px;
+}
+
+.leaf-munch {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.leaf-munch-fill {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: var(--m_outline) solid var(--c_tempest);
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--c_tempest);
+  transform-origin: center;
+  transition: transform var(--t_bubble);
+}
+
+.bubble-inner {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--c_coolbreeze);
+  pointer-events: none;
+  transform-origin: center;
+  transition: transform var(--t_bubble);
+}
+
 /* ----------------------------------------------------------------------------- */
 /* Definition */
 
@@ -249,66 +290,39 @@ p {
 }
 
 #definition .top-left-circle {
-  position: absolute;
   top: -35px;
   left: 10px;
   width: 240px;
   height: 240px;
-  background-color: var(--c_tempest);
-  border-radius: 50%;
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .top-left-circle-inner {
-  position: absolute;
   top: 5px;
   left: 50px;
   width: 160px;
   height: 160px;
-  background-color: var(--c_coolbreeze);
-  border-radius: 50%;
-  pointer-events: none;
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .top-left-circle-support {
-  position: absolute;
   top: 205px;
   left: -35px;
   width: 110px;
   height: 110px;
-  background-color: var(--c_tempest);
-  border-radius: 50%;
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .top-left-circle-support-inner {
-  position: absolute;
   top: 230px;
   left: -10px;
   width: 60px;
   height: 60px;
-  background-color: var(--c_coolbreeze);
-  border-radius: 50%;
-  pointer-events: none;
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .top-right-circle {
-  position: absolute;
   top: -70px;
   right: 140px;
   width: 200px;
   height: 200px;
-  background-color: var(--c_tempest);
-  border-radius: 50%;
   transform: scale(1);
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .top-bar {
@@ -331,55 +345,35 @@ p {
 }
 
 #definition .definition-circle-1 {
-  position: absolute;
   top: 85%;
   left: 30px;
   width: 85px;
   height: 85px;
-  background-color: var(--c_tempest);
-  border-radius: 50%;
   box-sizing: border-box;
   transform: scale(1);
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .definition-circle-2 {
-  position: absolute;
   top: calc(85% + 70px);
   left: -35px;
   width: 65px;
   height: 65px;
-  background-color: var(--c_tempest);
-  border-radius: 50%;
   transform: scale(1);
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .definition-circle-3 {
-  position: absolute;
   top: calc(85% + 140px);
   left: 30px;
   width: 25px;
   height: 25px;
-  background-color: var(--c_tempest);
-  border-radius: 50%;
   transform: scale(1);
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .rightmost-circle {
-  position: absolute;
   top: 430px;
   right: -150px;
   width: 400px;
   height: 400px;
-  background-color: var(--c_tempest);
-  border-radius: 50%;
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .rightmost-circle.group-pop {
@@ -388,16 +382,10 @@ p {
 }
 
 #definition .rightmost-circle-inner {
-  position: absolute;
   top: 485px;
   right: -95px;
   width: 290px;
   height: 290px;
-  background-color: var(--c_coolbreeze);
-  border-radius: 50%;
-  pointer-events: none;
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #definition .rightmost-circle-inner.group-pop {
@@ -452,15 +440,12 @@ p {
 }
 
 #quotes .circle-overflow-outline-1 {
-  position: absolute;
   top: -270px;
   right: -150px;
   width: 400px;
   height: 400px;
-  border-radius: 50%;
-  border: 3px solid var(--c_tempest);
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: transparent;
+  border: var(--m_outline) solid var(--c_tempest);
 }
 
 #quotes .circle-overflow-outline-1.group-pop {
@@ -469,16 +454,12 @@ p {
 }
 
 #quotes .circle-overflow-outline-2 {
-  position: absolute;
   top: -206.5px;
   right: -94px;
   width: 288px;
   height: 290px;
-  border-radius: 50%;
-  border: 3px solid var(--c_tempest);
-  pointer-events: none;
-  transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: transparent;
+  border: var(--m_outline) solid var(--c_tempest);
 }
 
 #quotes .circle-overflow-outline-2.group-pop {
@@ -492,24 +473,14 @@ p {
 }
 
 #quotes .top-right-leaf-cutout {
-  position: absolute;
-  width: 100px;
-  height: 100px;
   right: 240px;
   top: 120px;
   background-color: var(--c_beach);
-  border-radius: 50%;
 }
 
 #quotes .top-right-leaf-cutout-fill {
-  position: absolute;
-  width: 70px;
-  height: 70px;
   right: 255px;
   top: 135px;
-  border-radius: 50%;
-  border: 3px solid var(--c_tempest);
-  overflow: hidden;
 }
 
 #quotes .top-right-leaf-cutout-fill::after {
@@ -533,17 +504,14 @@ p {
   bottom: calc(var(--m_gap) + 15px);
   left: 15px;
   rotate: 90deg;
-  border: 3px solid var(--c_ribbit);
+  border: var(--m_outline) solid var(--c_ribbit);
   background: none;
 }
 
 #quotes .branch {
-  position: absolute;
-  width: 40px;
-  height: 450px;
   bottom: -5px;
   left: -20px;
-  border: 3px solid var(--c_biscuit);
+  border: var(--m_outline) solid var(--c_biscuit);
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -565,7 +533,7 @@ p {
 .explore-btn {
   width: 180px;
   height: 180px;
-  border: 3px solid var(--c_tempest);
+  border: var(--m_outline) solid var(--c_tempest);
   border-radius: 32px;
   background: transparent;
   color: var(--c_tempest);
@@ -602,13 +570,10 @@ p {
   right: 25px;
   rotate: 180deg;
   background: none;
-  border: 3px solid var(--c_ribbit);
+  border: var(--m_outline) solid var(--c_ribbit);
 }
 
 #explore .right-branch {
-  position: absolute;
-  width: 40px;
-  height: 450px;
   bottom: -5px;
   right: -20px;
   background-color: var(--c_biscuit);
@@ -619,24 +584,14 @@ p {
 }
 
 #explore .leaf-cutout {
-  position: absolute;
-  width: 100px;
-  height: 100px;
   left: 160px;
   top: 60px;
   background-color: #ffffff;
-  border-radius: 50%;
 }
 
 #explore .leaf-cutout-fill {
-  position: absolute;
-  width: 70px;
-  height: 70px;
   left: 175px;
   top: 75px;
-  border-radius: 50%;
-  border: 3px solid var(--c_tempest);
-  overflow: hidden;
 }
 
 #explore .leaf-cutout-fill::after {
@@ -652,9 +607,6 @@ p {
 }
 
 #explore .left-branch {
-  position: absolute;
-  width: 40px;
-  height: 450px;
   left: -20px;
   background-color: var(--c_biscuit);
 }
