@@ -858,6 +858,81 @@ p {
     justify-content: center;
   }
 
+  #definition {
+    padding: calc(var(--m_gap) * 4);
+  }
+
+  #definition .top-left-circle {
+    top: -100px;
+    left: 80px;
+  }
+
+  #definition .top-left-circle-inner {
+    background-color: transparent;
+  }
+
+  #definition .top-right-circle {
+    width: 180px;
+    height: 180px;
+    top: 80px;
+    right: 260px;
+  }
+
+  #definition .rightmost-circle {
+    top: 350px;
+    right: 70px;
+  }
+
+  #quotes .circle-overflow-outline-1 {
+    top: -245px;
+    right: 70px;
+  }
+
+  #quotes .top-right-leaf {
+    right: 100px;
+  }
+
+  #quotes .top-right-leaf-cutout-fill {
+    right: 330px;
+    top: 215px;
+  }
+
+  #quotes .top-right-leaf-cutout {
+    right: 315px;
+    top: 200px;
+  }
+
+  #quotes .bottom-left-leaf-outline {
+    left: 115px;
+  }
+  #quotes .bottom-left-leaf {
+    left: 100px;
+  }
+
+  #explore .top-right-leaf-outline,
+  #explore .top-right-leaf {
+    top: 160px;
+    right: 80px;
+  }
+
+  #explore .bottom-left-leaf {
+    top: 60px;
+    left: 80px;
+  }
+
+  #explore .leaf-cutout-fill {
+    top: 95px;
+    left: 235px;
+  }
+  #explore .leaf-cutout {
+    top: 80px;
+    left: 220px;
+  }
+
+  .explore-content {
+    gap: calc(var(--m_gap) * 2);
+  }
+
   .explore-grid {
     gap: 20px;
   }
