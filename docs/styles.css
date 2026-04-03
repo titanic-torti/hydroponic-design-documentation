@@ -534,13 +534,11 @@ p {
   height: 180px;
   border: var(--m_outline) solid var(--c_tempest);
   border-radius: 32px;
-  background: transparent;
   color: var(--c_tempest);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   transition:
     border-color 0.15s ease,
     color 0.15s ease,
@@ -840,13 +838,30 @@ p {
     display: block;
   }
 
-  #quotes {
+  #definition,
+  #quotes,
+  #palette,
+  #explore {
     height: auto;
     min-height: 0;
-    padding: var(--m_gap);
+    padding: calc(var(--m_gap) * 2);
     gap: var(--m_gap);
     align-items: center;
     justify-content: center;
+  }
+
+  .explore-grid {
+    gap: 20px;
+  }
+
+  .explore-btn {
+    width: 160px;
+    height: 160px;
+  }
+
+  .explore-btn svg {
+    width: 80px;
+    height: 80px;
   }
 
   .quote-card {
@@ -855,7 +870,17 @@ p {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 540px) {
+  .explore-btn {
+    width: 120px;
+    height: 120px;
+  }
+
+  .explore-btn svg {
+    width: 60px;
+    height: 60px;
+  }
+
   .swatch-grid {
     grid-template-columns: repeat(6, 54px);
     grid-template-rows: repeat(5, 54px);
