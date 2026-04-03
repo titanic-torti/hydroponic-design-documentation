@@ -635,117 +635,97 @@ p {
 }
 
 .tomato {
-  grid-column: 1;
-  grid-row: 2;
   background: var(--c_tomato);
 }
 
 .coral {
-  grid-column: 2;
-  grid-row: 1;
   background: var(--c_coral);
 }
 
 .monarch {
-  grid-column: 2;
-  grid-row: 2;
   background: var(--c_monarch);
 }
 
 .orangepop {
-  grid-column: 3;
-  grid-row: 2;
   background: var(--c_orangepop);
 }
 
 .goldfish {
-  grid-column: 4;
-  grid-row: 2;
   background: var(--c_goldfish);
 }
 
 .olive {
-  grid-column: 5;
-  grid-row: 2;
   background: var(--c_olive);
 }
 
 .beach {
-  grid-column: 6;
-  grid-row: 2;
   background: var(--c_beach);
 }
 
 .coolbreeze {
-  grid-column: 7;
-  grid-row: 2;
   background: var(--c_coolbreeze);
 }
 
 .cookiemonster {
-  grid-column: 8;
-  grid-row: 2;
   background: var(--c_cookiemonster);
 }
 
 .tempest {
-  grid-column: 9;
-  grid-row: 2;
   background: var(--c_tempest);
 }
 
 .clumsywizard {
-  grid-column: 10;
-  grid-row: 2;
   background: var(--c_clumsywizard);
 }
 
 .void {
-  grid-column: 11;
-  grid-row: 2;
   background: var(--c_void);
 }
 
 .greentea {
-  grid-column: 6;
-  grid-row: 3;
   background: var(--c_greentea);
 }
 
 .ribbit {
-  grid-column: 7;
-  grid-row: 3;
   background: var(--c_ribbit);
 }
 
 .cactus {
-  grid-column: 8;
-  grid-row: 3;
   background: var(--c_cactus);
 }
 
 .gandalf {
-  grid-column: 9;
-  grid-row: 3;
   background: var(--c_gandalf);
 }
 
 .bolt {
-  grid-column: 10;
-  grid-row: 3;
   background: var(--c_bolt);
 }
 
 .wardrobe {
-  grid-column: 11;
-  grid-row: 3;
   background: var(--c_wardrobe);
 }
 
 .biscuit {
-  grid-column: 10;
-  grid-row: 4;
   background: var(--c_biscuit);
+}
+
+.sw-spacer {
+  pointer-events: none;
+}
+
+.sw-spacer-1 {
+  grid-column: span 1;
+}
+.sw-spacer-4 {
+  grid-column: span 4;
+}
+.sw-spacer-5 {
+  grid-column: span 5;
+}
+
+.sw-spacer-mobile {
+  display: none;
 }
 
 .sw::after {
@@ -786,6 +766,19 @@ p {
 /* Mobile */
 
 @media (max-width: 700px) {
+  .swatch-grid {
+    grid-template-columns: repeat(6, 76px);
+    grid-template-rows: repeat(5, 76px);
+  }
+
+  .sw-spacer-5 {
+    display: none;
+  }
+
+  .sw-spacer-mobile {
+    display: block;
+  }
+
   #quotes {
     height: auto;
     min-height: 0;
