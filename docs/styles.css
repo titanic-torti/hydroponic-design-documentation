@@ -534,7 +534,7 @@ p {
   left: 15px;
   rotate: 90deg;
   border: 3px solid var(--c_ribbit);
-  background: None;
+  background: none;
 }
 
 #quotes .branch {
@@ -668,14 +668,6 @@ p {
   gap: var(--m_gap);
 }
 
-.palette {
-  background-color: #fff;
-  padding: 40px 40px 90px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
 .swatch-grid {
   display: grid;
   grid-template-columns: repeat(11, 76px);
@@ -686,6 +678,9 @@ p {
 .sw {
   border-radius: 2px;
   cursor: pointer;
+  position: relative;
+  border: none;
+  padding: 0;
 }
 
 .tomato {
