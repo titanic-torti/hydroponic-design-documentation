@@ -179,6 +179,26 @@ p {
   }
 }
 
+#definition .pop-bubble:hover,
+#definition .pop-bubble:hover + .pop-bubble-inner {
+  transform: scale(0);
+  transition: none;
+}
+
+#definition .pop-bubble.no-pop:hover,
+#definition .pop-bubble.no-pop:hover + .pop-bubble-inner {
+  transform: scale(1);
+  transition: none;
+}
+
+.shimmer-circle.shimmer {
+  animation: shimmer-border 0.5s ease-in-out;
+}
+
+.shimmer-circle.shimmer::after {
+  animation: shimmer-pass 0.3s ease-in-out;
+}
+
 /* ----------------------------------------------------------------------------- */
 /* Universal */
 
@@ -240,16 +260,6 @@ p {
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-#definition .top-left-circle:hover {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition .top-left-circle.no-pop:hover {
-  transform: scale(1);
-  transition: none;
-}
-
 #definition .top-left-circle-inner {
   position: absolute;
   top: 5px;
@@ -263,16 +273,6 @@ p {
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-#definition .top-left-circle:hover ~ .top-left-circle-inner {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition .top-left-circle.no-pop:hover ~ .top-left-circle-inner {
-  transform: scale(1);
-  transition: none;
-}
-
 #definition .top-left-circle-support {
   position: absolute;
   top: 205px;
@@ -283,16 +283,6 @@ p {
   border-radius: 50%;
   transform-origin: center;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-#definition .top-left-circle-support:hover {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition .top-left-circle-support.no-pop:hover {
-  transform: scale(1);
-  transition: none;
 }
 
 #definition .top-left-circle-support-inner {
@@ -308,18 +298,6 @@ p {
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-#definition .top-left-circle-support:hover ~ .top-left-circle-support-inner {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition
-  .top-left-circle-support.no-pop:hover
-  ~ .top-left-circle-support-inner {
-  transform: scale(1);
-  transition: none;
-}
-
 #definition .top-right-circle {
   position: absolute;
   top: -70px;
@@ -331,16 +309,6 @@ p {
   transform: scale(1);
   transform-origin: center;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-#definition .top-right-circle:hover {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition .top-right-circle.no-pop:hover {
-  transform: scale(1);
-  transition: none;
 }
 
 #definition .top-bar {
@@ -376,16 +344,6 @@ p {
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-#definition .definition-circle-1:hover {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition .definition-circle-1.no-pop:hover {
-  transform: scale(1);
-  transition: none;
-}
-
 #definition .definition-circle-2 {
   position: absolute;
   top: calc(85% + 70px);
@@ -399,16 +357,6 @@ p {
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-#definition .definition-circle-2:hover {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition .definition-circle-2.no-pop:hover {
-  transform: scale(1);
-  transition: none;
-}
-
 #definition .definition-circle-3 {
   position: absolute;
   top: calc(85% + 140px);
@@ -420,16 +368,6 @@ p {
   transform: scale(1);
   transform-origin: center;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-#definition .definition-circle-3:hover {
-  transform: scale(0);
-  transition: none;
-}
-
-#definition .definition-circle-3.no-pop:hover {
-  transform: scale(1);
-  transition: none;
 }
 
 #definition .rightmost-circle {
@@ -586,14 +524,6 @@ p {
   pointer-events: none;
 }
 
-#quotes .top-right-leaf-cutout-fill.shimmer {
-  animation: shimmer-border 0.5s ease-in-out;
-}
-
-#quotes .top-right-leaf-cutout-fill.shimmer::after {
-  animation: shimmer-pass 0.3s ease-in-out;
-}
-
 #quotes .bottom-left-leaf {
   bottom: var(--m_gap);
   rotate: 90deg;
@@ -719,14 +649,6 @@ p {
   background: var(--c_orangepop);
   transform: translateY(-100%);
   pointer-events: none;
-}
-
-#explore .leaf-cutout-fill.shimmer {
-  animation: shimmer-border 0.5s ease-in-out;
-}
-
-#explore .leaf-cutout-fill.shimmer::after {
-  animation: shimmer-pass 0.3s ease-in-out;
 }
 
 #explore .left-branch {
