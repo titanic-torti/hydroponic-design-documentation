@@ -97,6 +97,47 @@ initPopBubbleGroup(
   ],
 );
 
+function initShimmerLeaf(el) {
+  let animating = false;
+  let noPop = false;
+
+  el.addEventListener("mouseenter", () => {
+    if (noPop || animating) return;
+    animating = true;
+    el.classList.add("shimmer");
+    el.style.pointerEvents = "none";
+  });
+
+  el.addEventListener("animationend", (e) => {
+    if (e.animationName !== "shimmer-border") return;
+    el.classList.remove("shimmer");
+    el.style.pointerEvents = "";
+    animating = false;
+
+    const r = el.getBoundingClientRect();
+    const cx = r.left + r.width / 2;
+    const cy = r.top + r.height / 2;
+    const radius = r.width / 2;
+    const dx = mouseX - cx;
+    const dy = mouseY - cy;
+    if (dx * dx + dy * dy <= radius * radius) {
+      noPop = true;
+    }
+  });
+
+  el.addEventListener("mouseleave", () => {
+    if (noPop) {
+      noPop = false;
+    }
+  });
+}
+
+document
+  .querySelectorAll(
+    "#quotes .top-right-leaf-cutout-fill, #explore .leaf-cutout-fill",
+  )
+  .forEach(initShimmerLeaf);
+
 document.querySelectorAll(".sw").forEach((sw) => {
   sw.addEventListener("click", () => {
     navigator.clipboard.writeText(sw.dataset.hex).then(() => {

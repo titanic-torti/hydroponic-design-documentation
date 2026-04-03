@@ -586,11 +586,11 @@ p {
   pointer-events: none;
 }
 
-#quotes .top-right-leaf-cutout-fill:hover {
+#quotes .top-right-leaf-cutout-fill.shimmer {
   animation: shimmer-border 0.5s ease-in-out;
 }
 
-#quotes .top-right-leaf-cutout-fill:hover::after {
+#quotes .top-right-leaf-cutout-fill.shimmer::after {
   animation: shimmer-pass 0.3s ease-in-out;
 }
 
@@ -721,11 +721,11 @@ p {
   pointer-events: none;
 }
 
-#explore .leaf-cutout-fill:hover {
+#explore .leaf-cutout-fill.shimmer {
   animation: shimmer-border 0.5s ease-in-out;
 }
 
-#explore .leaf-cutout-fill:hover::after {
+#explore .leaf-cutout-fill.shimmer::after {
   animation: shimmer-pass 0.3s ease-in-out;
 }
 
