@@ -221,7 +221,7 @@ p {
   width: 300px;
   height: 300px;
   background-color: var(--c_ribbit);
-  border-radius: 0 65% 0 65%;
+  border-radius: 0 196px 0 196px;
 }
 
 .decoration-container {
@@ -496,13 +496,13 @@ p {
 
 #quotes .bottom-left-leaf {
   bottom: var(--m_gap);
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 
 #quotes .bottom-left-leaf-outline {
   bottom: calc(var(--m_gap) + 15px);
   left: 15px;
-  rotate: 90deg;
+  transform: rotate(90deg);
   border: var(--m_outline) solid var(--c_ribbit);
   background: none;
 }
@@ -562,13 +562,11 @@ p {
 #explore .top-right-leaf {
   top: 120px;
   right: 10px;
-  rotate: 180deg;
 }
 
 #explore .top-right-leaf-outline {
   top: 105px;
   right: 25px;
-  rotate: 180deg;
   background: none;
   border: var(--m_outline) solid var(--c_ribbit);
 }
