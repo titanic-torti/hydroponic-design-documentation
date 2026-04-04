@@ -409,7 +409,7 @@ p {
 
 .quote-card {
   background-color: var(--c_clumsywizard);
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 24px 28px;
   max-width: 320px;
   position: relative;
@@ -635,7 +635,7 @@ p {
 }
 
 .sw {
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   position: relative;
   border: none;
