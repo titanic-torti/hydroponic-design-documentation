@@ -533,6 +533,9 @@ p {
   width: 180px;
   height: 180px;
   border: var(--m_outline) solid var(--c_tempest);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 32px;
   color: var(--c_tempest);
   cursor: pointer;
