@@ -118,6 +118,10 @@ h1 {
   text-decoration: underline;
 }
 
+#hydro-separator {
+  display: none;
+}
+
 p {
   color: var(--c_tempest);
 }
@@ -340,7 +344,6 @@ p {
   border-radius: 48px;
   padding: 3rem 2.5rem;
   max-width: 600px;
-  text-align: left;
   z-index: 1;
 }
 
@@ -868,6 +871,14 @@ p {
     left: 80px;
   }
 
+  #definition .top-left-circle-inner,
+  #definition .top-left-circle-support,
+  #definition .top-left-circle-support-inner,
+  #definition .rightmost-circle-inner,
+  #quotes .circle-overflow-outline-2 {
+    visibility: hidden;
+  }
+
   #definition .top-left-circle-inner {
     background-color: transparent;
   }
@@ -968,6 +979,47 @@ p {
   .swatch-grid {
     grid-template-columns: repeat(6, 54px);
     grid-template-rows: repeat(5, 54px);
+  }
+}
+
+@media (max-width: 460px) {
+  h1 {
+    text-align: center;
+  }
+  #hydro-separator {
+    display: block;
+  }
+
+  .definition-card {
+    min-width: 300px;
+    padding: 2rem 2.5rem;
+  }
+
+  #definition .top-left-circle {
+    top: -110px;
+    left: 140px;
+  }
+
+  #definition .rightmost-circle {
+    right: 20px;
+  }
+
+  #definition .definition-circle-1 {
+    top: 88%;
+  }
+
+  #quotes .circle-overflow-outline-1 {
+    top: -290px;
+    right: 20px;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+  }
+
+  .explore-btn {
+    width: 110px;
+    height: 110px;
   }
 }
 
