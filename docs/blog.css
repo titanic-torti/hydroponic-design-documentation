@@ -208,3 +208,12 @@
   color: var(--c_cactus);
   font-size: 1.1rem;
 }
+
+/* ----------------------------------------------------------------------------- */
+/* Mobile */
+
+@media (max-width: 440px) {
+  .filter-group {
+    flex-direction: column;
+  }
+}
